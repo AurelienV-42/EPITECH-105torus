@@ -1,0 +1,35 @@
+#!/usr/bin/python3
+
+from math import *
+import sys
+import argparse
+
+parser = argparse.ArgumentParser(description = 'This is my 104intersection')
+parser.add_argument("opt", type = int, choices = (1, 2, 3), help = "1, 2 or 3")
+parser.add_argument("a0", type = float, help = "Error type")
+parser.add_argument("a1", type = float, help = "Error type")
+parser.add_argument("a2", type = float, help = "Error type")
+parser.add_argument("a3", type = float, help = "Error type")
+parser.add_argument("a4", type = float, help = "Error type")
+parser.add_argument("n", type = float, help = "Error type")
+
+try:
+     args = parser.parse_args()
+except:
+     print ("Error when parsing arguments")
+     exit(84)
+
+if (args.opt == 1):
+     if (args.p <= 0):
+          exit(84)
+
+if (args.opt == 2):
+     if (args.p <= 0):
+          sys.exit(84)
+
+if (args.opt == 3):
+     if (args.p > 90 or args.p <= 0):
+          exit(84)
+result = 0.5
+
+print ("x = ", result, sep='')
